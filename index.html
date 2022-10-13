@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>devCodeCamp HTML Worksheet</title>
+        <title>Tyler's devCodeCamp HTML Worksheet</title>
         <style> body { font-family: Arial, Helvetica, sans-serif; } </style>
     </head>
 
@@ -11,42 +11,46 @@
         <br>
 
         <header>
-            <p>devCodeCamp HTML Worksheet</p>
+            <p id="Top">devCodeCamp HTML Worksheet</p>
         </header>
         
         <br>
 
         <main>
             <section>
-                <p>Section Overview</p>
-
+                <h1>Section Overview</h1>
+                <nav>
                 <p>
                     This worksheet will help introduce you to some of the main concepts of HTML. You will learn:
                 </p>
 
+                
                 <ul>
+                    
                     <li>
-                        <p>Paragraphs and Headers</p>
+                        <p><a href="#Section 1">Paragraphs and Headers</a></p>
                     </li>
                     <li>
-                        <p>Lists and Tables</p>
+                        <p><a href="#Section 2">Lists and Tables</a></p>
                     </li>
                     <li>
-                        <p>Attributes</p>
+                        <p><a href="#Section 3">Attributes</a></p>
                     </li>
                     <li>
-                        <p>Hyperlinks</p>
+                        <p><a href="#Section 4">Hyperlinks</a></p>
                     </li>
                     <li>
-                        <p>Images</p>
+                        <p><a href="#Section 5">Images</a></p>
                     </li>
                     <li>
-                        <p>In-line and block elements</p>
+                        <p><a href="#Section 7">In-line and block elements</a></p>
                     </li>
                     <li>
                         <p>And much more!</p>
                     </li>
+                
                 </ul>
+                </nav>
 
                 <p>
                     This worksheet is intended to be open in two programs: VS Code and your preferred web browser. To open it in your browser, find the index.html file in your File Explorer (Finder on Mac) and double click it-- it should open in your system's default browser.
@@ -84,7 +88,7 @@
 
             <section>
 
-                <p>Section 1 - Paragraphs and Headers</p>
+                <h2 id="Section 1">Section 1 - Paragraphs and Headers</h2>
 
                 <p>
                     Most basic text you want to show up on a page should be enclosed with &lt;p&gt;&lt;/p&gt; tags, the "p" standing for "paragraph".
@@ -96,6 +100,10 @@
 
                 <p>
                     Add your own &lt;p&gt; tag element below this line. You can write anything you'd like, but starting a new language with the phrase "Hello world!" is good luck!
+                </p>
+                
+                <p>
+                    Hello world!
                 </p>
 
                 <p>
@@ -131,9 +139,9 @@
 
             <section>
 
-                <p>Section 2 - Lists and Tables</p>
+                <h2 id="Section 2">Section 2 - Lists and Tables</h2>
 
-                <p>Subsection a. - Lists</p>
+                <h3>Subsection a. - Lists</h3>
 
                 <p>Lists are a quick way to organize a sequence of items. There are two types of lists:</p>
 
@@ -158,13 +166,25 @@
                     Create your own Unordered List below this line, list out your 3 favorite movies.
                 </p>
 
+                <ol>
+                    <li>
+                        <p>Return of the King</p>
+                    </li>
+                    <li>
+                        <p>The Two Towers</p>
+                    </li>
+                    <li>
+                        <p>Fellowship of the Ring</p>
+                    </li>
+                </ol>
+
                 <p>
                     Ordered lists work just like Unordered lists, but they use a &lt;ol&gt; tag instead of &lt;ul&gt;. Change the Unordered List you just created into an Ordered List. The &lt;li&gt; tags can remain the same!
                 </p>
 
                 <br>
 
-                <p>Subsection b. - Tables</p>
+                <h3>Subsection b. - Tables</h3>
 
                 <p>
                     Tables are very similar in structur to lists. There is an opening and closing &lt;table&gt; tag, and inside, there are &lt;tr&gt; (table row) tags to designate the different rows. However, unlike lists, which only have a single item in each row, a table is also split into columns, which allows a row to contain multiple cells of data.
@@ -175,6 +195,10 @@
                 </p>
 
                 <table>
+                    <tr>
+                        <th>Star Trek</th>
+                        <th>Star Wars</th>
+                    </tr>
                     <tr>
                         <td>Picard</td>
                         <td>Kenobi</td>
@@ -219,7 +243,7 @@
             <br>
 
             <section>
-                <p>Section 3 - Attributes</p>
+                <h2 id="Section 3">Section 3 - Attributes</h2>
 
                 <p>
                     Some tags require more information than just what type of tag it is. This "extra" information is supplied through <b>attributes</b>.
@@ -241,7 +265,7 @@
                     That means there can never be another element on the same .html page that also has an id with the value of "Earl".
                 </p>
                 
-                <div>
+                <div id="target">
                     <p>
                         This block of text is enclosed by a &lt;div&gt; element. Divs typically don't have a visual element that can be identified in the browser, so they are often used to create "divisions" in a webpage. We will do more with divs later, but for now, give this div an attribute with the name <b>id</b> and the value <b>"target"</b>. We will shortly be using this id as the target of a hyperlink.
                     </p>
@@ -252,7 +276,7 @@
             <br>
 
             <section>
-                <p>Section 4 - Hyperlinks and Formatting</p>
+                <h2 id="Section 4">Section 4 - Hyperlinks and Formatting</h2>
 
 
 
@@ -266,7 +290,7 @@
 
 
                                 <p>
-                                    Find this line on the index.html page in VS Code. It will be easy to spot, it is the paragraph that is tabbed in several extra spaces to the right. Notice that, even though it is tabbed in on the .html file, the text in the browser looks the same as all the others. Also, there are 10+ empty lines above it, yet this not create empty lines on the webpage in the browser? This demonstrates that non-markdown formatting in the .html file does not have any affect on the actual formatting of the webpage content.
+                                    Find this line on the index.html page in VS Code. It will be easy to spot, it is the paragraph that is tabbed in several extra spaces to the right. Notice that, even though it is tabbed in on the .html file, the text in the browser looks the same as all the others. Also, there are 10+ empty lines above it, yet this does not create empty lines on the webpage in the browser? This demonstrates that non-markdown formatting in the .html file does not have any affect on the actual formatting of the webpage content.
                                 </p>
                                 
                                 
@@ -409,6 +433,8 @@
                     Now, create your own link below that will take you back up to the div that you gave the id of "target".
                 </p>
 
+                <p><a href="#target">Right on target</a></p>
+
             </section>
 
             <br>
@@ -416,7 +442,7 @@
 
             <section>
 
-                <p>Section 5 - Images</p>
+                <h2 id="Section 5">Section 5 - Images</h2>
 
                 <p>
                     Congratulations on making it this far! This plain text website must be very boring to stare at. Let's try to make it a little more exciting by adding an image.
@@ -445,6 +471,8 @@
                     There should be an image called "coffee.jpg" included in this folder. Add it to this page in an img tag below. Since it is in the same folder, you can just enter the filename itself in the src="". Also make sure to come up with a descriptive string for the alt!
                 </p>
 
+                <img src="coffee.jpg" alt="Coffee beans spilling out of an orange mug on an orange plate across a dark gray/black surface">
+
             </section>
 
             <br>
@@ -452,7 +480,7 @@
 
             <section>
 
-                <p>Section 6 - Semantic Elements</p>
+                <h2 id="Section 6">Section 6 - Semantic Elements</h2>
 
                 <p>
                     Up until now, we have mostly been using &lt;p&gt; tags to contain our content. The &lt;p&gt; tag is great for housing paragraph text, but as the design of our sites gets more complex, there is need for better ways to organize our content.
@@ -508,6 +536,8 @@
                     Add a &lt;footer&gt; element below this section to say "Completed by YourName". Notice that it gets placed right where the element is! Now make it a true footer by cutting and pasting it to the bottom of the document, after the &lt;main&gt; element (but still inside the &lt;body&gt;)
                 </p>
 
+
+
             </section>
 
             <br>
@@ -515,7 +545,7 @@
 
             <section>
 
-                <p>Section 7 - Inline vs Block</p>
+                <h2 id="Section 7">Section 7 - Inline vs Block</h2>
 
                 <p>
                     The last thing we'll look at on this project is something that you may or may not have noticed yet.
@@ -530,7 +560,7 @@
                 </p>
                 
                 <p>
-                    The first few, the &lt;b&gt;, &lt;a&gt;, &lt;i&gt;, and &lt;span&gt;, are all seamlessly integrated into the sentence, while the &lt;div&gt; and &lt;aside&gt; push their words onto new lines, even though there is no differnce in how they are used within the sentence. There are no &lt;br&gt; line breaks, so why is this happening?
+                    The first few, the &lt;b&gt;, &lt;a&gt;, &lt;i&gt;, and &lt;span&gt;, are all seamlessly integrated into the sentence, while the &lt;div&gt; and &lt;aside&gt; push their words onto new lines, even though there is no difference in how they are used within the sentence. There are no &lt;br&gt; line breaks, so why is this happening?
                 </p>
 
                 <p>
@@ -550,7 +580,7 @@
                 </p>
 
                 <p>
-                    <span>Change</span> <span>these</span> <span>&lt;span&gt;</span> <span>tags</span> <span>to</span> <span>&lt;div&gt;s</span> <span>to</span> <span>see</span> <span>the</span> <span>difference.</span>
+                    <div>Change</div> <div>these</div> <div>&lt;span&gt;</div> <div>tags</div> <div>to</div> <div>&lt;div&gt;s</div> <div>to</div> <div>see</div> <div>the</div> <div>difference.</div>
                 </p>
 
             </section>
@@ -568,5 +598,6 @@
             <br>
 
         </main>
+        <footer><a href="#Top">Completed by Tyler</a></footer>
     </body>
 </html>
